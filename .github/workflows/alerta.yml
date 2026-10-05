@@ -1,0 +1,20 @@
+name: Notificación Push
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      - name: Ejecutar programa Hola Mundo
+        run: node app.js
+
+      - name: Enviar notificación a ntfy
+        run: |
+          curl -d "Nuevo commit en main por ${{ github.actor }}: Hola Mundo ejecutado con éxito" https://ntfy.sh/devops-itla
