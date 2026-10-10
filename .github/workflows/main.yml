@@ -1,0 +1,32 @@
+
+name: Desplegar pagina con Surge
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar codigo
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Instalar Surge
+        run: npm install --global surge
+
+      - name: Desplegar pagina web
+        env:
+          SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
+          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
+        run: surge ./practica-surge devops-yailyn-practica.surge.sh
