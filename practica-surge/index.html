@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera página web</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .contenedor {
+            background-color: white;
+            padding: 45px 35px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 550px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(100, 50, 120, 0.2);
+        }
+
+        h1 {
+            color: #a044a8;
+            margin-bottom: 20px;
+            font-size: 2.2rem;
+        }
+
+        p {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .boton {
+            display: inline-block;
+            background-color: #b04ac7;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            transition: background-color 0.3s;
+        }
+
+        .boton:hover {
+            background-color: #85369b;
+        }
+
+        footer {
+            margin-top: 30px;
+            color: #888;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="contenedor">
+        <h1>¡Hola, mundo!</h1>
+
+        <p>
+            Bienvenidos a mi primera página web.
+            Esta página forma parte de mi práctica de
+            integración continua y despliegue automático
+            con GitHub Actions y Surge.
+        </p>
+
+        <a class="boton" href="https://github.com/yai-19/DevOps">
+            Ver mi repositorio
+        </a>
+
+        <footer>
+            Desarrollado por Yailyn Santana
+        </footer>
+    </main>
+</body>
+</html>
